@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 export default function Login() {
 
-  const Logins = new Map();
+  const Users = new Map();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const errorDisplay = document.getElementById("error");
 
-  Logins.set('Melly123', 'Tunip123$');
+  Users.set('Melly123', 'Tunip123$');
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -33,7 +33,7 @@ export default function Login() {
 
     // Check if password matches username
     if (exists) {
-      if (Logins.get(username) === password) {
+      if (Users.get(username) === password) {
         console.log("Your password matches");
         setIsLoggedIn(true);
         errorDisplay.textContent = "";
@@ -54,7 +54,7 @@ export default function Login() {
   }
 
   function checkIfUsernameExists(name) {
-    if (Logins.has(name)) {
+    if (Users.has(name)) {
       return true;
     }
     else {
