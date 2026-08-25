@@ -1,13 +1,28 @@
-import LoginPage from '../LoginPage/LoginPage.jsx';
+
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import './App.css';
 import Dashboard from '../Dashboard/Dashboard.jsx';
 import Preferences from '../Preferences/Preferences.jsx';
-import './App.css';
+import LoginPage from '../LoginPage/LoginPage.jsx';
+
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+}
+
+function getToken() {
+  const tokenString = sessionStorage.getItem('token');
+  if (!tokenString) {
+    return null;
+  }
+  const userToken = JSON.parse(tokenString);
+  return userToken?.token;
+}
 
 function App() {
 
-  const [token, setToken] = useState();
+  const token = getToken();
 
   if (!token) {
     return <LoginPage setToken={setToken} />
