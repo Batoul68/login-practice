@@ -1,8 +1,8 @@
-import LoginPage from './components/LoginPage/LoginPage.jsx';
+import LoginPage from '../LoginPage/LoginPage.jsx';
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard/Dashboard.jsx';
-import Preferences from './components/Preferences/Preferences.jsx';
+import Dashboard from '../Dashboard/Dashboard.jsx';
+import Preferences from '../Preferences/Preferences.jsx';
 import './App.css';
 
 function App() {
