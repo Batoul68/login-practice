@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(assets/background.jpg);
+  background-image: url(./assets/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,42 +17,18 @@ body {
   align-items: center;
 }
 
-.login-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+h1 {
+  font-family: "Bubble Font";
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 4px 4px 5px rgb(53, 18, 24);
 }
 
-input {
-  margin: 50px 10px;
-  padding: 20px;
-  width: 100%;
-  height: 50px;
-  font-size: 2rem;
-  border-radius: 30px;
-  border: 3px solid rgb(53, 18, 24);
+h2 {
   font-family: monospace;
-  color: rgb(53, 18, 24);
-  box-shadow: 4px 4px 5px rgb(53, 18, 24);
-}
-
-#login-button {
-  width: 50%;
-  height: 80px;
-  font-size: 3rem;
-  font-family: "Bubble Font";
-  background-color: rgb(253, 176, 189);
   color: white;
-  border: 3px solid white;
-  box-shadow: 3px 3px 5px rgb(53, 18, 24);
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-#error {
-  font-family: "Bubble Font";
-  font-size: 3rem;
-  color: white;
+  text-align: center;
+  font-size: 2.5rem;
   text-shadow: 4px 4px 5px rgb(53, 18, 24);
 }
