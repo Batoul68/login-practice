@@ -17,22 +17,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage setToken={setToken} />} />
-          <Route 
-            path="/dashboard" 
-            element={
-              <ProtectedRoute token={token}>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route 
-            path="/preferences" 
-            element={
-              <ProtectedRoute token={token}>
-                <Preferences />
-              </ProtectedRoute>
-            }
-          />
+          <Route element={<ProtectedRoute token={token}/>}>
+            <Route 
+              path="/dashboard" 
+              element={<Dashboard />}/>
+            <Route 
+              path="/preferences" 
+              element={<Preferences />}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

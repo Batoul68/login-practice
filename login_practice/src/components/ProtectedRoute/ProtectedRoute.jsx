@@ -1,9 +1,6 @@
-import { Navigate } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 
-export default function ProtectedRoute({ children, token }) {
-  if(!token) {
-    return <Navigate to="/login" replace />
-  }
-
-  return children;
+export default function ProtectedRoute({ token }) {
+  console.log(token);
+  return token ? <Outlet/> : <Navigate to="/login"/>
 }

@@ -7,11 +7,11 @@ export async function loginUser(credentials) {
     },
     body: JSON.stringify(credentials)
   })
-    .then(data => {
-      if(!data.ok) {
-        throw new Error("Couldn't fetch data");
+    .then(response => {
+      if(!response.ok) {
+        throw new Error(`Login failed: ${response.statusText}`);
       }
-      return data.json();
+      return response.json();
     })
     .catch(error => console.error(error));
 }
